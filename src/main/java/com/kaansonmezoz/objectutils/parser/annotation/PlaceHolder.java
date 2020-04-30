@@ -1,4 +1,4 @@
-package com.kaansonmezoz.objectutils.annotations;
+package com.kaansonmezoz.objectutils.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
