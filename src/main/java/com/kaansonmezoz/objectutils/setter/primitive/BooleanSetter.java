@@ -9,6 +9,6 @@ class BooleanSetter extends PrimitiveFieldSetter {
 
     @Override
     public void set(Object object, Field field, String value) throws IllegalAccessException {
-
+        field.setBoolean(object, Boolean.parseBoolean(value));
     }
 }
