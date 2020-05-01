@@ -1,7 +1,13 @@
 package com.kaansonmezoz.objectutils.setter.primitive;
 
-import java.lang.reflect.Field;
+import com.kaansonmezoz.objectutils.setter.FieldSetter;
+import lombok.Getter;
 
-interface PrimitiveFieldSetter {
-    void set(Object object, Field field, String value) throws IllegalAccessException;
+@Getter
+abstract class PrimitiveFieldSetter implements FieldSetter {
+    private final Class fieldType;
+
+    PrimitiveFieldSetter(Class fieldType) {
+        this.fieldType = fieldType;
+    }
 }

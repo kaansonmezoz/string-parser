@@ -4,9 +4,9 @@ import com.kaansonmezoz.objectutils.setter.Setter;
 
 import java.lang.reflect.Field;
 
-public class CharSetter extends Setter {
+class CharSetter extends PrimitiveFieldSetter {
     protected CharSetter() {
-        super(boolean.class, fieldSetters);
+        super(boolean.class);
     }
 
     @Override

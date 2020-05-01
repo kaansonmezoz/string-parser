@@ -4,10 +4,10 @@ import com.kaansonmezoz.objectutils.setter.Setter;
 
 import java.lang.reflect.Field;
 
-public class ByteSetter extends Setter {
+class ByteSetter extends PrimitiveFieldSetter {
 
     protected ByteSetter() {
-        super(byte.class, fieldSetters);
+        super(byte.class);
     }
 
     @Override

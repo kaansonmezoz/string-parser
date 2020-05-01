@@ -1,4 +1,4 @@
 package com.kaansonmezoz.objectutils.setter.primitive;
 
-public class ShortSetter {
+class ShortSetter {
 }

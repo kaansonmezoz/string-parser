@@ -4,10 +4,10 @@ import com.kaansonmezoz.objectutils.setter.Setter;
 
 import java.lang.reflect.Field;
 
-public class IntSetter extends Setter {
+class IntSetter extends PrimitiveFieldSetter {
 
     public IntSetter() {
-        super(int.class, fieldSetters);
+        super(int.class);
     }
 
     @Override
