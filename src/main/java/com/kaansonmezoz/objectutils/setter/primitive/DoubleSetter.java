@@ -1,9 +1,15 @@
 package com.kaansonmezoz.objectutils.setter.primitive;
 
-import com.kaansonmezoz.objectutils.setter.Setter;
-
 import java.lang.reflect.Field;
 
-public class DoubleSetter extends Setter {
+class DoubleSetter extends PrimitiveFieldSetter {
 
+    DoubleSetter() {
+        super(double.class);
+    }
+
+    @Override
+    public void set(Object object, Field field, String value) throws IllegalAccessException {
+        field.setDouble(object, Double.parseDouble(value));
+    }
 }
