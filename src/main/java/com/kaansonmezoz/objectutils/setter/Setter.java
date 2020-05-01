@@ -28,16 +28,11 @@ public class Setter {
 
     }
 
-    private void set(Object object, Field field, String value) throws IllegalAccessException {
-        fieldSetters.get(field.getType().isPrimitive())
-                .set(object, field, value);
-    }
-
     private void setField(Object object, Field field, String value) throws IllegalAccessException {
         boolean accessible = field.isAccessible();
 
         field.setAccessible(true);
-        set(object, field, value);
+        fieldSetters.get(field.getType().isPrimitive()).set(object, field, value);
         field.setAccessible(accessible);
     }
 
